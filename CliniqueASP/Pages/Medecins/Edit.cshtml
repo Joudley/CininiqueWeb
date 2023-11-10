@@ -1,0 +1,68 @@
+@page
+@model Clinique.Pages.Medecins.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<body style="background-color:lightgrey;">   
+</body>
+
+<h1 style="text-align: center;">Editer un medecin</h1>
+
+<hr/>
+<hr/>
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Medecin.MedecinId" />
+            <div class="form-group">
+                <label asp-for="Medecin.Nom" class="control-label"></label>
+                <input asp-for="Medecin.Nom" class="form-control" />
+                <span asp-validation-for="Medecin.Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medecin.Prenom" class="control-label"></label>
+                <input asp-for="Medecin.Prenom" class="form-control" />
+                <span asp-validation-for="Medecin.Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medecin.Sexe" class="control-label"></label>
+                <input asp-for="Medecin.Sexe" class="form-control" />
+                <span asp-validation-for="Medecin.Sexe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medecin.Telephone" class="control-label"></label>
+                <input asp-for="Medecin.Telephone" class="form-control" />
+                <span asp-validation-for="Medecin.Telephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medecin.Address" class="control-label"></label>
+                <input asp-for="Medecin.Address" class="form-control" />
+                <span asp-validation-for="Medecin.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medecin.Email" class="control-label"></label>
+                <input asp-for="Medecin.Email" class="form-control" />
+                <span asp-validation-for="Medecin.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medecin.Specialite" class="control-label"></label>
+                <input asp-for="Medecin.Specialite" class="form-control" />
+                <span asp-validation-for="Medecin.Specialite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enregistrer" class="btn btn-primary mt-2 mb-2 w-100" />
+            </div>
+            <div>
+                <a asp-page="./Index" class="btn btn-dark w-100">Retour</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

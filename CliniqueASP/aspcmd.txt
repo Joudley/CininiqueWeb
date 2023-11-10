@@ -1,0 +1,23 @@
+	dotnet add package Microsoft.AspNetCore.Identity.UI
+
+
+    dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore
+
+
+    dotnet aspnet-codegenerator identity -dc GHIdentityContext --files "Account.Register;Account.Login;Account.Logout;Account.RegisterConfirmation" --useSqLite
+	
+
+
+
+dotnet ef migrations add CreateIdentitySheme --context GHIdentityContext 
+
+
+
+
+
+
+	dotnet ef database update --context GHIdentityContext 
+
+
+
+

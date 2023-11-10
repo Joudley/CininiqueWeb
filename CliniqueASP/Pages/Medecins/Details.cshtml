@@ -1,0 +1,63 @@
+@page
+@model Clinique.Pages.Medecins.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<body style="background-color:lightgrey;">   
+</body>
+
+
+
+<div>
+    <h4>Details de ce medecin</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medecin.Nom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medecin.Nom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medecin.Prenom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medecin.Prenom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medecin.Sexe)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medecin.Sexe)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medecin.Telephone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medecin.Telephone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medecin.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medecin.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medecin.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medecin.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medecin.Specialite)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medecin.Specialite)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Medecin?.MedecinId" class="btn btn-primary">Editer</a> |
+    <a asp-page="./Index" class="btn btn-dark">Retour</a>
+</div>

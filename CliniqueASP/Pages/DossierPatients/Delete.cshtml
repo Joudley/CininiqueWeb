@@ -1,0 +1,60 @@
+@page
+@model Clinique.Pages.DossierPatients.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<body style="background-color:lightgrey;">   
+</body>
+
+
+
+<h3>Etes vous sur de vouloir effacer ce dossier patient?</h3>
+<div>
+
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DossierPatient.Nom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DossierPatient.Nom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DossierPatient.Prenom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DossierPatient.Prenom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DossierPatient.Sexe)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DossierPatient.Sexe)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DossierPatient.Telephone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DossierPatient.Telephone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DossierPatient.Adresse)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DossierPatient.Adresse)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DossierPatient.ConsultationDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DossierPatient.ConsultationDate)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="DossierPatient.Code" />
+        <input type="submit" value="Effacer" class="btn btn-danger" /> |
+        <a asp-page="./Index" class="btn btn-dark">Retour</a>
+    </form>
+</div>

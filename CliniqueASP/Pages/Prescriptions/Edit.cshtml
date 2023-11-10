@@ -1,0 +1,42 @@
+@page
+@model Clinique.Pages.Prescriptions.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<body style="background-color:lightgrey;">   
+</body>
+
+
+<h4 style="text-align: center;">Editer une Prescription</h4>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Prescription.PrescriptionId" />
+            <div class="form-group">
+                <label asp-for="Prescription.ConsultationId" class="control-label"></label>
+                <select asp-for="Prescription.ConsultationId" class="form-control" asp-items="ViewBag.ConsultationId"></select>
+                <span asp-validation-for="Prescription.ConsultationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prescription.Prescrire" class="control-label"></label>
+                <input asp-for="Prescription.Prescrire" class="form-control" />
+                <span asp-validation-for="Prescription.Prescrire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enregistrer" class="btn btn-primary mt-2 mb-2 w-100" />
+            </div>
+            <div>
+                <a asp-page="./Index" class="btn btn-dark w-100">Retour</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

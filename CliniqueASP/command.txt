@@ -1,0 +1,16 @@
+NEED TO INSTALL
+    dotnet add package Microsoft.EntityFrameworkCore
+	dotnet add package Microsoft.EntityFrameworkCore.Design
+	dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+	dotnet add package Microsoft.EntityFrameworkCore.tools
+	dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+COMMAND TO CREATE ALL PAGES
+    dotnet-aspnet-codegenerator razorpage -m DossierPatient -dc GHContext -udl -outDir Pages/DossierPatients --referenceScriptLibraries -sqlite
+	dotnet-aspnet-codegenerator razorpage -m Medecin -dc GHContext -udl -outDir Pages/Medecins --referenceScriptLibraries -sqlite
+	dotnet-aspnet-codegenerator razorpage -m Consultation -dc GHContext -udl -outDir Pages/Consultations --referenceScriptLibraries -sqlite
+	dotnet-aspnet-codegenerator razorpage -m Prescription -dc GHContext -udl -outDir Pages/Prescriptions --referenceScriptLibraries -sqlite
+
+COMMAND TO APPLY MIGRATIONS
+    dotnet ef migrations add InitialCreate
+	dotnet ef database update

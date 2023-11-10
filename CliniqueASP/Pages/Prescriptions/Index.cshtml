@@ -1,0 +1,61 @@
+@page
+@model Clinique.Pages.Prescriptions.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<body style="background-color:lightgrey;">
+    
+</body>
+
+ <div class="col-md-2">
+            <a asp-page="Create" class="btn btn-primary mt-3"> Nouvelle prescription</a>
+        </div>
+
+</br>
+
+@* <div>
+<form>
+    <p> 
+        <input type="text" asp-for="SearchString" placeholder="Rechercher par nom" class="form-control">
+    
+    </p>
+</form>
+</div> *@
+
+<hr>
+<hr>
+<h2 class="justify-content-center d-flex center mb-4">Liste des prescriptions</h2>
+
+
+<table class="table table-striped table-gray">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Prescription[0].Consultation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prescription[0].Prescrire)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Prescription) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Consultation.ConsultationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prescrire)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PrescriptionId" class="btn btn-dark">Editer</a> |
+                <a asp-page="./Details" asp-route-id="@item.PrescriptionId" class="btn btn-info style">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PrescriptionId" class="btn btn-danger">Effacer</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

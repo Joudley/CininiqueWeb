@@ -1,0 +1,59 @@
+@page
+@model Clinique.Pages.Consultations.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<body style="background-color:lightgrey;">   
+</body>
+
+
+
+
+<div>
+    <h4>Details de cette consultation</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultation.Medecin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultation.MedecinId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultation.CodePatient)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultation.CodePatient)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultation.Poids)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultation.Poids)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultation.Hauteur)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultation.Hauteur)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultation.Diagnostique)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultation.Diagnostique)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Consultation.ConsultationDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Consultation.ConsultationDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Consultation?.ConsultationId"  class="btn btn-primary">Editer</a> |
+    <a asp-page="./Index" class="btn btn-dark">Retour</a>
+</div>

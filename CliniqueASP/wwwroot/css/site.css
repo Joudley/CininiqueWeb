@@ -1,0 +1,25 @@
+html {
+  font-size: 14px;
+}
+body{
+  background-image: url(".\.\images\ab.jpeg");?
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.body2 {
+  background-image: url("C:\Users\IPEPH\Desktop\YoungProject\CliniqueASP\wwwroot\images\ab.jpg");
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}

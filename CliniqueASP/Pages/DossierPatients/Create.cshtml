@@ -1,0 +1,66 @@
+@page
+@model Clinique.Pages.DossierPatients.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<body style="background-color:lightgrey;">
+    
+</body>
+
+<h1 class="diplay-2" style="text-align: center;">Creer un dossier patient</h1>
+
+<hr />
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DossierPatient.Nom" class="form-label"></label>
+                <input asp-for="DossierPatient.Nom" class="form-control" />
+                <span asp-validation-for="DossierPatient.Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DossierPatient.Prenom" class="form-label"></label>
+                <input asp-for="DossierPatient.Prenom" class="form-control" />
+                <span asp-validation-for="DossierPatient.Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DossierPatient.Sexe" class="form-label"></label>
+                <input asp-for="DossierPatient.Sexe" class="form-control" />
+                <span asp-validation-for="DossierPatient.Sexe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DossierPatient.Telephone" class="form-label"></label>
+                <input asp-for="DossierPatient.Telephone" class="form-control" />
+                <span asp-validation-for="DossierPatient.Telephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DossierPatient.Adresse" class="form-label"></label>
+                <input asp-for="DossierPatient.Adresse" class="form-control" />
+                <span asp-validation-for="DossierPatient.Adresse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DossierPatient.ConsultationDate" class="form-label"></label>
+                <input asp-for="DossierPatient.ConsultationDate" class="form-control" />
+                <span asp-validation-for="DossierPatient.ConsultationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enregistrer" class="btn btn-primary mt-2 mb-2 w-100" />
+            </div>
+            <div >
+                <a asp-page="Index" class="btn btn-dark w-100">Retour</a>
+    
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
